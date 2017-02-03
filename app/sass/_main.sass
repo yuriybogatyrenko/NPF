@@ -1,0 +1,1887 @@
+body, input, button, textarea
+	font-family: verdana, sans-serif, arial
+	font-size: 14px
+	border: none
+	color: #565656
+	outline: none
+
+body, html
+	position: relative
+	height: 100%
+
+.container
+	width: 1000px
+	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
+
+.page-wrapper
+	min-width: 1030px
+	min-height: 100%
+	padding-bottom: 140px
+	position: relative
+	box-sizing: border-box
+
+.b-header
+	background: #f6f7f7
+	height: 150px
+	box-sizing: border-box
+	padding-bottom: 25px
+
+	.b-header_company__dropdown-hidden
+		z-index: 5
+		margin-top: -10px
+
+.b-logo
+	line-height: 125px
+	padding-left: 20px
+
+	&__image
+		vertical-align: middle
+
+.b-header__information
+	line-height: 125px
+	padding-right: 20px
+
+.icon-logout
+	display: inline-block
+	vertical-align: middle
+	+s(icon-logout)
+
+	&:hover
+		+s(icon-logout-hover)
+
+.b-header_company__name
+	font-size: 15px
+	color: #232323
+	margin-bottom: 10px
+
+.b-header_company__dropdown-current
+	font-size: 12px
+	cursor: pointer
+
+.icon-trigger
+	display: inline-block
+	vertical-align: middle
+	+arr(8,6,#565655, b)
+
+.b-header_personal_manager-information
+	margin-right: 95px
+
+	&.small-margin
+		margin-right: 20px
+
+.b-header_personal_manager-avatar
+	border-radius: 100%
+
+.b-header_personal_manager-information__title
+	font-size: 10px
+	color: #bababa
+	margin-bottom: 2px
+
+.b-header_personal_manager-information__name
+	color: #999999
+	font-size: 12px
+	margin-bottom: 5px
+
+	&.black
+		color: #000
+
+.b-header_personal_manager-information__phone
+	font-size: 15px
+	color: #999999
+
+	&.fz12
+		font-size: 12px
+
+.b-navigation
+	background: #54565b
+	margin-top: -25px
+	margin-bottom: 25px
+
+.b-navigation__menu
+	display: table
+	width: 100%
+
+.b-navigation__menu-item
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+	border-right: 1px solid #323335
+
+	&:last-child
+		border-right: none
+
+	&.home--link
+		width: 50px
+
+	&.active, &:hover
+		.b-navigation__menu-link
+			&:after
+				display: block
+				content: ''
+				position: absolute
+				height: 5px
+				background: #fbb900
+				width: 100%
+				left: 0
+				bottom: 0
+
+	&:hover
+		.b-navigation__menu-link
+			&:after
+				height: 2px
+
+.b-navigation__menu-link
+	display: block
+	color: #fff
+	text-decoration: none
+	font-size: 12px
+	line-height: 50px
+	padding: 0 20px
+	position: relative
+
+.icon-menu_home
+	+s(icon-menu_home)
+	display: inline-block
+	vertical-align: middle
+
+.b-navigation__menu-sup
+	vertical-align: middle
+	line-height: normal
+	vertical-align: super
+	font-size: 10px
+	color: #f8b716
+
+.b-attention
+	background-color: #ffeec7
+	background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 4px, #ffe8b3 4px, #ffe8b3 5px)
+	background-image: -moz-repeating-linear-gradient(-45deg, transparent, transparent 4px, #ffe8b3 4px, #ffe8b3 5px)
+	background-image: -o-repeating-linear-gradient(-45deg, transparent, transparent 4px, #ffe8b3 4px, #ffe8b3 5px)
+	background-image: -ms-repeating-linear-gradient(-45deg, transparent, transparent 4px, #ffe8b3 4px, #ffe8b3 5px)
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 4px, #ffe8b3 4px, #ffe8b3 5px)
+	border: 2px solid #fee095
+	text-align: center
+	margin: 0 20px
+	color: #565656
+	font-size: 17px
+	position: relative
+	line-height: 110px
+	margin-bottom: 20px
+
+.b-attention__close
+	position: absolute
+	top: 5px
+	right: 5px
+	width: 15px
+	height: 15px
+	cursor: pointer
+
+	&:after, &:before
+		position: absolute
+		top: 50%
+		left: 50%
+		+transform(rotate(45deg) translate3d(-50%, -50%, 0))
+		+origin(top left)
+		content: ''
+		display: block
+		width: 100%
+		height: 2px
+		background: #fcc01a
+
+	&:before
+		top: 50%
+		left: 50%
+		+transform(rotate(-45deg) translate3d(-50%, -50%, 0))
+
+.block-title
+	color: #fbb900
+	font-size: 21px
+	padding: 0 20px
+	margin-bottom: 15px
+
+	&.small
+		font-size: 19px
+
+	&.no-mb
+		margin-bottom: 0
+
+	&.dark
+		color: #565655
+
+.grey-block
+	background: #f7f7f7
+
+.grey-bg
+	background: #f7f7f7
+
+.b-contact-agreement__header
+	line-height: 50px
+	border-bottom: 2px solid #eaeaea
+	padding: 0 20px
+
+.b-breadcrumbs__link
+	@extend .yellow-link.link-with_arrow
+	color: #848484
+	text-decoration: none
+	font-size: 12px
+
+	&:hover
+		color: #fbb900
+
+	&:after
+		display: inline-block
+		vertical-align: middle
+		margin-left: 5px
+		content: ''
+		+s(icon-arrow_right)
+		position: relative
+		top: -1px
+
+.drop-down__current
+	color: #232323
+	font-size: 15px
+
+	&:after
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		top: -1px
+		margin-left: 10px
+		content: ''
+		+arr(8,6,#565656,b)
+
+.b-contract-agreement__table
+	.td
+		height: 40px
+		vertical-align: middle
+		border-bottom: 1px solid #eeeeee
+		font-size: 12px
+		color: #53565a
+		padding: 0 20px
+
+	.th
+		color: #999999
+		font-size: 11px
+
+.yellow-link
+	color: #565656
+	text-decoration: none
+	cursor: pointer
+
+	&.darker
+		color: #232323
+
+	&:hover
+		color: #fbb900
+
+		.icon-document_download
+			+s(icon-document_download-yellow)
+
+		.icon-add_order
+			+s(icon-create_order_yellow)
+
+		.icon-mail
+			+s(icon-mail_yellow)
+
+		.icon-document_pdf
+			+s(icon-document_pdf-yellow)
+
+		.icon-document_word
+			+s(icon-document_word-yellow)
+
+		.icon-document_excel
+			+s(icon-document_excel-yellow)
+
+		.icon-document_edit
+			+s(icon-document_edit-yellow)
+
+		.icon-document_blank
+			+s(icon-document_blank-yellow)
+
+		.grey-color
+			color: #fbb900
+
+	&.dark
+		color: #232323
+
+		&:hover
+			color: #fbb900
+
+	&.link-with_arrow
+		&:after
+			display: inline-block
+			vertical-align: middle
+			margin-left: 5px
+			content: ''
+			+s(icon-arrow_right)
+			position: relative
+			top: -1px
+
+		&:hover
+			&:after
+				+s(icon-arrow_right-yellow)
+
+	&.allways-yellow
+		color: #fbb900
+
+		&:hover
+			color: #565656
+
+.grey-color
+	color: #999999
+
+.b-contract-agreement__bottom-link
+	line-height: 50px
+	padding: 0 20px
+	color: #232323
+	font-size: 12px
+
+.b-dropdown__wrapper
+	// position: relative
+	z-index: 5
+	// &:hover
+	// 	.b-dropdown__hidden
+	// 		display: block
+
+.b-dropdown__hidden
+	position: absolute
+	top: 100%
+	text-align: left
+	right: 0
+	background: #f6f7f7
+	min-width: 100%
+	padding: 5px 0
+	box-shadow: 0 0 10px #ccc
+
+.icon-eye
+	display: inline-block
+	vertical-align: middle
+	+s(icon-eye_gray)
+	position: relative
+	top: -1px
+	margin-left: 5px
+
+.report_link
+	&:hover
+		.icon-eye
+			+s(icon-eye_yellow)
+
+.drop-down__wrapper
+	position: relative
+	&:hover
+		.drop-down__hidden
+			display: block
+			position: absolute
+			top: 100%
+			left: -10px
+			background: #f7f7f7
+			min-width: 100%
+			box-shadow: 0 0 10px #ccc
+			padding: 7px 10px
+
+.drop-down__item
+	line-height: normal
+
+.drop-down__link
+	padding: 7px 0
+	display: block
+	@extend .yellow-link
+
+.b-account-statement__form
+	padding: 20px
+
+	&.no-paddings
+		padding: 0
+
+	.form-line
+		line-height: 50px
+
+.form-field__caption
+	font-size: 12px
+	color: #232323
+	// width: 150px
+
+input[type="text"], input[type="phone"], input[type="number"], input[type="email"], input[type="password"], textarea
+	border: 1px solid #d8d8d8
+	background: #fff
+	padding: 0 12px
+	line-height: 36px
+	height: 38px
+	display: inline-block
+	vertical-align: middle
+	width: 100%
+	box-sizing: border-box
+	max-width: 550px
+	color: #232323
+
+	&::-ms-clear
+		display: none
+
+	&.date-picker
+		width: 130px
+
+	&.inactive, &:disabled
+		background-color: transparent
+
+	&.error
+		box-shadow: 0 0 5px #f00
+
+	&.no-max
+		max-width: 100%
+
+textarea
+	height: 200px
+	min-height: 100px
+	min-width: 100%
+
+.b-header__inner-wrapper
+	z-index: 105
+
+.button
+	display: inline-block
+	vertical-align: middle
+	padding: 0 20px
+	line-height: 36px
+	border-radius: 3px
+	cursor: pointer
+	border: none
+	overflow: hidden
+	position: relative
+	text-decoration: none
+	font-size: 12px
+	cursor: pointer
+	text-align: center
+
+	&.long
+		padding: 0 60px
+
+	&.button-empty
+		color: #848484
+		border: 1px solid #bababa
+		box-sizing: border-box
+
+		&:hover
+			background: #565655
+			border-color: transparent
+			color: #fff
+
+		&:active
+			background: #565655
+			border-color: transparent
+			color: #fff
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+
+	&.button-yellow
+		background: #fbb900
+		color: #232323
+
+		&:hover
+			background: #e5a300
+			color: #4f3b12
+
+		&:active
+			background: #e5a300
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+			color: #4f3b12
+
+	&.button-grey
+		color: #fff
+		background: #848484
+
+		&:hover
+			background: #2d3033
+
+		&:active
+			background: #2d3033
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+
+	&.button-regular
+		background: #565655
+		color: #fff
+
+		&:hover
+			background: #2e3033
+
+		&:active
+			background: #2d3033
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+
+	&.button-lightgrey
+		background: #e5e5e5
+		color: #232323
+
+		&:hover
+			background: #bababa
+
+		&:active
+			background: #bababa
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.2)
+
+	&.db
+		display: block
+
+.b-last-orders__header
+	padding: 20px
+
+.form-search-orders__input-wrapper
+	width: 500px
+
+.b-last-order__sup-number
+	vertical-align: super
+	font-size: 9px
+	color: #848484
+	margin-left: 5px
+
+.b-last-orders__navigation
+	position: relative
+	background: #fff
+	z-index: 2
+	border-top: 1px solid #fcfcfc
+
+	&.dark-border-top
+		border-top: 1px solid #f5f5f5
+
+	&:before
+		width: 99%
+		left: 0.5%
+		bottom: 2px
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+		display: block
+		content: ''
+		position: absolute
+		top: 10px
+		z-index: -2
+
+	&:after
+		right: 0
+		left: 0
+		bottom: 0
+		background: #fff
+		display: block
+		content: ''
+		position: absolute
+		top: 0
+		z-index: -1
+
+	&.border-top
+		border-top: 1px solid #f5f5f5
+
+.b-last-orders__nav-table
+	position: relative
+
+.b-last-orders__nav-td
+	background: #fff
+	&.active, &:hover
+		.b-last-order__link
+			color: #232323
+			&:after
+				display: block
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 3px
+				background: #fbb900
+	&:hover
+		.b-last-order__link
+			&:after
+				height: 1px
+
+	&:last-child:not(.has-border)
+		.b-last-order__link
+			&:before
+				display: none
+
+.b-last-order__link
+	display: block
+	position: relative
+	line-height: 45px
+	padding: 0 20px
+
+	&:before
+		height: 80%
+		width: 1px
+		display: block
+		content: ''
+		right: 0
+		top: 10%
+		background: #ededed
+		position: absolute
+
+.b-last-orders__table, .standard-table
+	color: #232323
+	border-collapse: collapse
+
+	.th
+		color: #999999
+		height: 40px
+		background: #fff
+		font-size: 11px
+		border-top: 1px solid #f2f2f2
+
+	.td
+		border-bottom: 1px solid #f2f2f2
+		vertical-align: middle
+		padding: 14px 20px
+		box-sizing: border-box
+
+	.tr:not(.no-hover-white)
+		&:hover
+			.td
+				background: #f7f7f7
+
+			.th
+				background: #fff
+
+.standard-table
+	.td
+		border: none
+		border-bottom: 1px solid #ededed
+
+	.th
+		background-color: transparent
+
+.blue-color
+	color: #6ca7b7
+
+.green-color
+	color: #749358
+
+.lightgreen-color
+	color: #6caf37
+
+.red-color
+	color: #f20000
+
+.icon-clip
+	display: inline-block
+	vertical-align: middle
+	+s(icon-clip)
+	position: relative
+	top: -1px
+	margin-right: 5px
+
+.b-last-orders__table-status
+	width: 150px
+
+.b-last-orders__table-date
+	width: 120px
+
+.b-last-orders__bottom-nav
+	line-height: 50px
+	padding: 10px 20px 0
+
+.b-pagination__item
+	display: inline-block
+	vertical-align: middle
+	margin-right: 3px
+
+	&:last-child
+		margin-right: 0
+
+.b-pagination__link
+	line-height: 30px
+	padding: 0 10px
+	display: block
+	border-radius: 3px
+	color: #232323
+	&:hover
+		background: #e5e5e5
+	&.first-item, &.last-item
+		background: #e5e5e5
+		padding: 0 30px
+		line-height: 35px
+		color: #565656
+
+		&:hover
+			background: #c7c7c7
+
+		&:active
+			background: #c7c7c7
+			box-shadow: inset 0 0 5px rgba(0,0,0,0.3)
+
+.b-banners__item
+	float: left
+	width: 32.3333%
+	font-size: 0
+	line-height: 0
+	margin-right: 1.5%
+
+	&:last-child
+		margin-right: 0
+
+.b-banners__image
+	width: 100%
+
+.b-footer
+	background: #54565b
+	padding: 40px 0
+	color: #fff
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+
+	&.footer-auth
+		padding: 60px 0
+
+.auth-header__phone
+	font-size: 19px
+	color: #fbb900
+
+.b-auth__form
+	background: #f7f7f7
+	padding: 40px 35px
+	border-radius: 5px
+	display: inline-block
+	box-shadow: 0 0 10px rgba(0,0,0,0.2)
+	margin-bottom: 70px
+
+.b-auto__form-caption
+	width: 70px
+
+.b-auto__form-input
+	width: 260px
+
+.icon-lock
+	display: inline-block
+	vertical-align: middle
+	+s(icon-lock)
+
+.b-auth
+	padding: 60px 0 120px
+
+.login-title
+	font-size: 21px
+	color: #565655
+
+.login-descr
+	font-size: 17px
+	color: #565655
+
+.icon-question
+	display: block
+	+s(icon-question)
+
+.b-auto__terms-item
+	padding-left: 50px
+	position: relative
+	line-height: 1.5
+
+	.icon-question
+		position: absolute
+		top: 0
+		left: 0
+
+.icon-breadcrumbs_home
+	display: inline-block
+	vertical-align: middle
+	+s(icon-bradcrumbs_home)
+
+.b-top-breadcrumbs__item
+	line-height: normal
+	&:first-child
+		font-size: 0
+	&:after
+		// +s(icon-arrow_down)
+		display: inline-block
+		vertical-align: middle
+		margin: 0 4px 0 9px
+		content: '\203A'
+		position: relative
+		top: -1px
+		font-size: 9px
+		// +rotate(-90)
+	
+	&:last-child
+		&:after
+			display: none
+	
+.b-top-bradcrumbs
+	margin-top: -10px
+	padding: 0 20px
+	font-size: 9px
+	color: #999999
+
+.page-title
+	@extend .block-title
+	color: #565655
+	margin-bottom: 20px
+
+.b-recomended
+	margin-bottom: 40px
+
+.b-recomended__top-information
+	background: #ffeec7
+
+.b-recomended__title
+	font-size: 21px
+	color: #232323
+
+.b-recomended__content
+	color: #565655
+	width: 350px
+	line-height: 1.45
+
+.b-recomended__descr
+	padding: 20px
+
+.b-recomended__bottom-title
+	font-size: 17px
+	color: #fbb900
+	line-height: 35px
+	margin-bottom: 5px
+
+.b-recomended__bottom-content
+	color: #232323
+	font-size: 13px
+
+.b-recomended__bottom-left-col, .b-recomended__bottom-right-col
+	padding-left: 50px
+	width: 50%
+	box-sizing: border-box
+	position: relative
+	padding-right: 50px
+
+	.icon
+		position: absolute
+		top: 0
+		left: 20px
+
+.b-recomended__item
+	margin-bottom: 50px
+
+	&:last-child
+		margin-bottom: 0
+
+.icon-question_yellow
+	display: inline-block
+	+s(icon-question_yellow)
+
+.icon-bulb
+	display: inline-block
+	+s(icon-bulb)
+
+.b-recomended__bottom-information
+	margin-bottom: 50px
+
+.b-all-programms__item
+	width: 48%
+	margin-right: 3%
+	vertical-align: top
+	padding: 18px 0
+
+	&:nth-child(2n)
+		margin-right: 0
+
+.b-all-programms__wrapper
+	padding: 7px 20px
+
+.b-all-programms__item-title
+	font-size: 17px
+	color: #232323
+	margin-bottom: 15px
+
+
+.b-all-programms__item-list
+	padding-left: 15px
+	position: relative
+	margin-bottom: 8px
+
+	&:before
+		display: block
+		content: ''
+		position: absolute
+		top: 8px
+		width: 4px
+		height: 4px
+		background: #565655
+		left: 0
+
+	&:last-child
+		margin-bottom: 0
+
+.b-last-payments__table
+	border: 2px solid #d8d8d8
+	border-radius: 2px
+
+	.td
+		border-bottom: 1px solid #eeeeee
+		color: #565655
+		vertical-align: middle
+		height: 40px
+		font-size: 12px
+		padding: 0 15px
+		background: #f7f7f7
+
+	.th
+		color: #999999
+		font-size: 11px
+
+	.tr
+		&:last-child
+			.td
+				border-bottom: none
+
+.b-search
+	padding: 20px
+
+	&__input-wrapper
+		width: 435px
+		position: relative
+
+.icon-clear
+	display: inline-block
+	+s(icon-cross)
+	cursor: pointer
+
+	&:hover
+		+s(icon-cross-yellow)
+
+	&.clear-input
+		position: absolute
+		+pos(tm)
+		right: 10px
+
+.b-offices
+	padding: 0 15px
+
+.b-offices__link
+	font-size: 15px
+	color: #232323
+
+.b-offices__others-group
+	margin-bottom: 13px
+
+	.b-offices__title
+		margin-bottom: 2px
+
+.b-offices__office-item
+	margin-bottom: 8px
+
+.b-offices__others-col
+	float: left
+	width: 33.333%
+
+.b-offices
+	margin-bottom: 50px
+
+.icon-mail
+	display: inline-block
+	vertical-align: middle
+	margin-right: 5px
+	+s(icon-mail_gray)
+	position: relative
+	top: -1px
+
+.icon-add_order
+	display: inline-block
+	vertical-align: middle
+	margin-right: 5px
+	+s(icon-create_order_gray)
+	position: relative
+	top: -1px
+
+.table-contract-info
+	.tr
+		&:hover
+			.yellow-link
+				color: #232323
+
+				&:hover
+					color: #fbb900
+					.icon-add_order
+						+s(icon-create_order_yellow)
+
+					.icon-mail
+						+s(icon-mail_yellow)
+
+			.icon-add_order
+				+s(icon-create_order_dark)
+
+			.icon-mail
+				+s(icon-mail_dark)
+
+.table-contract-info__date
+	width: 100px
+
+.table-contract-info__amount
+	width: 120px
+	white-space: nowrap
+
+.b-contract-details__company-name
+	padding: 0 20px
+	font-size: 15px
+	color: #232323
+
+.download-scanned-doc
+	position: relative
+	padding-left: 25px
+	display: block
+
+	&:before
+		display: block
+		content: ''
+		position: absolute
+		left: 0
+		top: 2px
+		+s(icon-document_scan)
+
+	&:hover
+		color: #fbb900
+		.grey-color
+			color: #fbb900
+		&:before
+			+s(icon-document_scan-yellow)
+
+.icon-document_scan
+	+s(icon-scan)
+	display: inline-block
+	vertical-align: middle
+
+.b-solidary__account-amount
+	color: #232323
+	line-height: 60px
+	padding: 0 20px
+	border-left: 1px solid #f9f9f9
+	border-right: 1px solid #f9f9f9
+
+.input-datepicker__wrapper
+	background: #fff
+	position: relative
+	line-height: normal
+	display: inline-block
+	vertical-align: middle
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		+pos(tm)
+		right: 10px
+		+s(icon-calendar)
+	input.date-picker
+		background: transparent
+		position: relative
+		z-index: 1
+
+.contract-report
+	.form-field__caption
+		min-width: 106px
+
+.element550
+	width: 550px
+
+.cotracts-table-group__table, .cotracts-table-group__header
+	.checkbox--col
+		width: 40px
+		padding-right: 0
+		padding-left: 20px
+	.agreement--col
+		width: 120px
+	.status--col
+		width: 120px
+	.accounts--col
+		width: 200px
+	.total-account--col
+		width: 170px
+	.pension--col
+		width: 150px
+	.order--col
+		width: 200px
+
+	.td
+		color: #565656
+
+.contracts--company__name
+	color: #232323
+
+.cotracts-table-group__section-header
+	border-bottom: 1px solid #f7f7f7
+	.checkbox--wrapper
+		width: 40px
+		text-align: center
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+		position: relative
+		top: -1px
+		margin-right: 4px
+		box-sizing: border-box
+		padding-left: 20px
+
+.b-filial-ditails
+	padding-left: 50px
+	line-height: 40px
+
+.cotracts-table-group__section-header
+	line-height: 55px
+	position: relative
+	cursor: pointer
+
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		+pos(tm)
+		right: 10px
+		+s(icon-arrow_down)
+
+	&.active
+		&:after
+			+transform(translateY(-50%) rotate(180deg))
+
+		.cotracts-table-group__contracts-number
+			display: none
+
+.cotracts-table-group__contracts-number
+	margin-right: 40px
+
+.cotracts-table-group__contracts-the_number-descr
+	width: 100px
+
+.checkbox
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: -1px
+
+	input[type="checkbox"]
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		z-index: 1
+		margin: 0
+		padding: 0
+
+	& + .checkbox--name
+		color: #bababa
+
+	&.active
+		& + .checkbox--name
+			color: #000
+	
+.icon-checkbox
+	display: block
+	+s(icon-checkbox)
+
+input[type="checkbox"]
+	&:checked + .icon-checkbox
+		+s(icon-checkbox_checked)
+
+
+.page-descr
+	padding: 0 20px
+
+.b-profile
+	padding: 25px 20px
+
+.b-profile__left-side
+	margin-right: 34px
+
+.b-profile__input-caption
+	width: 70px
+	text-align: right
+	margin-right: 15px
+	font-size: 11px
+	line-height: 40px
+
+.b-profile__input-field
+	input
+		max-width: none
+
+.b-profile__section-item
+	padding: 0 20px
+
+.star-input__tooltip
+	position: absolute
+	+pos(tm)
+	left: 100%
+	margin-left: 20px
+	background: #fff
+	line-height: 35px
+	padding: 0 20px
+	box-shadow: 0 0 5px rgba(0,0,0,0.2)
+	white-space: nowrap
+	font-size: 11px
+
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		left: -5px
+		width: 20px
+		height: 20px
+		background: #fff
+		box-shadow: 0 0 5px rgba(0,0,0,0.2)
+		top: 50%
+		+transform(translateY(-50%) rotate(45deg))
+		z-index: -51
+
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: #fff
+		position: absolute
+		display: block
+
+.star-input__tooltip-text
+	position: relative
+	z-index: 1
+
+.b-profile__right-side
+	.form-line
+		padding: 0 0
+
+	.b-profile__input-caption, .b-profile__input-field
+		padding: 4px 0
+
+	.b-profile__input-field
+		padding-left: 5px
+		padding-right: 5px
+
+.b-profile__input-field
+	.input-wrap
+		&:hover
+			.star-input__tooltip
+				display: block
+
+.icon-star
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: -1px
+	+s(icon-star_gray)
+
+.input-star
+	position: absolute
+	right: 10px
+	+pos(tm)
+	cursor: pointer
+
+	input:checked
+		&+.icon-star
+			+s(icon-star_yellow)
+
+.b-profile__section
+	.grey-section
+		padding: 15px 0
+
+.b-profile__section-caption
+	width: 260px
+	margin-right: 25px
+	font-size: 14px
+
+.b-profile__section-caption, .b-profile__section-content
+	line-height: 25px
+
+.b-profile__section-content
+	&:not(.no-checkbox-area-width)
+		.b-profile__section-checkbox
+			min-width: 140px
+			margin-right: 35px
+			white-space: nowrap
+
+			&:nth-child(3n)
+				margin-right: 0
+
+	&.no-checkbox-area-width
+		line-height: 36px
+
+	.checkbox--name
+		font-size: 13px
+		margin-left: 10px
+		line-height: normal
+
+	.checkbox
+		top: 0
+
+// .b-change-password
+.b-profile__section-caption.input-caption
+	line-height: 40px
+	width: 255px
+	padding: 5px 0
+
+.input-notice
+	max-width: 50%
+
+.b-profile__section-content.input-content
+	padding: 5px
+
+.input-wrapper
+	width: 45%
+
+.icon-input_ok
+	+s(icon-form_success)
+	display: inline-block
+	vertical-align: middle
+
+.user-profile-table__main
+	color: #232323
+
+	.no-border
+		td
+			border-bottom: none
+
+.user-profile-table__first-col
+	width: 240px
+
+.icon-document__template
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: -1px
+	margin-right: 5px
+
+.icon-document_download
+	@extend .icon-document__template
+	+s(icon-document_download)
+
+.icon-document_edit
+	@extend .icon-document__template
+	+s(icon-document_edit)
+
+.icon-document_clip
+	@extend .icon-document__template
+	+s(icon-document_clip)
+
+.icon-document_blank
+	@extend .icon-document__template
+	+s(icon-document_blank)
+
+.user-profile-table__template-name
+	padding-left: 25px
+	vertical-align: top
+
+.user-profile-table__main
+	td
+		padding: 15px
+		line-height: normal
+		vertical-align: bottom
+		border-bottom: 1px solid #eee
+
+		&:first-child
+			border-left: 1px solid #eee
+
+		&:last-child
+			border-right: 1px solid #eee
+
+	.user-profile-table__first-col
+		vertical-align: top
+
+	.table--yellow-row
+		td
+			background: #ffeec7
+
+.icon-document_excel, .icon-document_word, .icon-document_pdf
+	@extend .icon-document__template
+	+s(icon-document_excel)
+
+.icon-document_word
+	+s(icon-document_word)
+
+.icon-document_pdf
+	+s(icon-document_pdf)
+
+input[type="file"].styled
+	position: absolute
+	opacity: 0
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	cursor: pointer
+
+.form-document-template__order
+	padding: 0 20px
+
+.b-order-letters__left-side, .b-order-letters__right-side
+	.letters-line
+		margin-bottom: 13px
+
+	.block-title
+		margin-bottom: 5px
+
+	.checkbox
+		margin-right: 10px
+
+.b-order-letters
+	padding: 20px
+	border: 1px solid #f5f5f5
+
+.documents-listing__item
+	margin-bottom: 15px
+	position: relative
+	padding-left: 30px
+	line-height: 1.8
+
+	&.inactive
+		opacity: 0.5
+
+	i[class*="icon-"]
+		position: absolute
+		left: 0
+		top: 0
+
+	&:last-child
+		margin-bottom: 0
+
+	.yellow-link
+		color: #232323
+		&:hover
+			color: #fbb900
+			.grey-color
+				color: inherit
+
+.documents-listing
+	padding: 20px
+
+.icon-arrow_down
+	display: inline-block
+	vertical-align: middle
+	+s(icon-arrow_down)
+	cursor: pointer
+
+	&.active
+		+rotate(180)
+
+.ui-datepicker
+	font-weight: normal
+	font-size: 12px
+	text-align: center
+	border: none
+	box-shadow: 0 0 5px rgba(0,0,0,0.2)
+	border-radius: 0
+	z-index: 100 !important
+
+	.ui-datepicker-header
+		background: none
+		border: none
+
+	th
+		font-weight: normal
+		color: #bababa
+		text-align: center
+
+	.ui-state-default
+		line-height: 20px
+		background: #fff
+		border: none
+		text-align: center
+
+		&:hover
+			background: #fbb900
+
+	.ui-datepicker-next, .ui-datepicker-prev
+		text-align: center
+		display: block
+		height: 22px
+		line-height: 22px
+		width: 22px
+		border: none
+		background: none
+		position: static
+		float: right
+		&-hover
+			border: none
+			position: static
+			background: none
+			height: 22px
+			line-height: 22px
+			width: 22px
+			top: 0
+			margin: 0
+		span
+			+s(icon-arrow_right)
+			display: inline-block
+			vertical-align: middle
+			position: static
+			margin: 0
+			top: 0
+			left: 0
+
+	.ui-datepicker-prev
+		float: left
+		span
+			+rotate(180)
+
+.ui-datepicker-title
+	font-weight: normal
+
+.padding-section
+	padding-left: 20px
+	padding-right: 20px
+
+.b-profile__offices
+	line-height: 40px
+
+.profile-stage3__table
+	.td
+		padding: 10px 20px
+		vertical-align: top
+		line-height: 35px
+
+		&.th
+			border-bottom: 1px solid #eeeeee
+			padding: 20px
+
+.dropdown--checkboxes
+	position: relative
+
+	.dropdown--hidden
+		line-height: normal
+		z-index: 101
+
+.dropdown--selected__items
+	line-height: 1.5
+	color: #848484
+	cursor: pointer
+	padding: 3px 12px 0
+	font-size: 12px
+
+.dropdown--text
+	@extend .jq-selectbox__select
+	padding: 0 12px
+	position: relative
+	padding-right: 25px
+
+.dropdown--trigger
+	border-top: 5px solid #999
+	border-right: 5px solid transparent
+	border-left: 5px solid transparent
+	display: inline-block
+	vertical-align: middle
+	position: absolute
+	+pos(tm)
+	right: 10px
+	
+.dropdown--hidden
+	position: absolute
+	top: 100%
+	left: -10%
+	min-width: 120%
+	margin-top: 0
+	z-index: 2
+	padding-top: 5px
+
+	&:after
+		display: block
+		content: ''
+		width: 20px
+		height: 20px
+		background: #fff
+		box-shadow: 0 0 5px rgba(0,0,0,0.2)
+		+rotate(45)
+		position: absolute
+		top: 0
+		left: 20px
+
+	&:before
+		box-shadow: 0 0 5px rgba(0,0,0,0.2)
+		display: block
+		content: ''
+		top: 5px
+		bottom: 0
+		left: 0
+		right: 0
+		position: absolute
+
+.dropdown--hidden__wrapper
+	background: #fff
+	position: relative
+	z-index: 2
+	padding: 15px
+	
+
+	li
+		padding: 5px
+
+.white-bg
+	td
+		background: #fff
+
+.icon-cross
+	+s(icon-cross)
+	display: inline-block
+	vertical-align: middle
+	cursor: pointer
+
+	&:hover
+		+s(icon-cross-yellow)
+		display: inline-block
+
+.table-contract-info
+	.td
+		padding-left: 20px
+		padding-right: 20px
+		&:first-child
+			width: 200px
+
+		&.table-contract-info__orders
+			padding-right: 80px
+
+.new-application__form-left, .new-application__form-right
+	line-height: 50px
+
+.new-application__form-left
+	width: 135px
+	box-sizing: border-box
+
+.new-application__form-right
+	// padding: 0 5px
+	width: 500px
+
+	&.wa
+		width: auto
+
+.new-application__form
+	padding: 0 20px
+
+.new-application__form-added-files__title
+	padding-left: 15px
+
+	&.pl20
+		padding-left: 20px
+	&.pr20
+		padding-right: 20px
+
+.new-application__form-added-files__item
+	padding: 15px
+	background: #ffeec7
+
+	&.pl20
+		padding-left: 20px
+
+	&.pr20
+		padding-right: 20px
+
+.new-application__form-added-files__item-remove
+	position: absolute
+	top: 5px
+	right: 5px
+
+.new-application__form-added-file-name__link
+	color: #232323
+
+.table-fund-contact__table
+	color: #565655
+	border: 1px solid #f7f7f7
+	
+	.tr
+		&:hover
+			.td
+				background: inherit
+
+		&:nth-child(2n)
+			&:hover
+				.td
+					background: #f7f7f7
+
+	.td
+		padding: 40px 20px
+		border: none
+
+	.table-fund-contact__table-first-col
+		width: 190px
+
+.b-application__header-left
+	width: 115px
+
+.b-application
+	padding: 0 20px 20px
+	border-bottom: 1px solid #f2f2f2
+
+.b-application__message-item
+	padding: 20px
+	margin-bottom: 20px
+
+	&:last-child
+		margin-bottom: 0
+
+.dropfile-area
+	background: #ffe9c5
+	padding: 0 20px
+	border: 1px solid #fdda87
+	line-height: 105px
+	box-sizing: border-box
+
+	&.ondrag
+		background: #fff
+
+	&:hover
+		.yellow-link
+			color: #fbb900
+
+		.icon-document_clip
+			+s(icon-document_clip-yellow)
+
+.b-reports__table-input-wrapper
+	margin-left: 30px
+
+.b-reports__table
+	border: 1px solid #ededed
+	border-bottom: none
+	.td
+		padding: 25px 20px
+		box-sizing: border-box
+		color: #232323
+		border-bottom: 1px solid #ededed
+
+	>.tr
+		&:hover
+			>.td
+				background: #f7f7f7
+
+.reports--arch--form__first-block
+	padding-left: 15px
+	padding-right: 15px
+	padding-top: 20px
+	margin-bottom: -15px
+
+.reports-arch__table
+	.td
+		padding: 10px 20px
+		color: #565655
+
+	.tr
+		&:last-child
+			.td
+				border-bottom: none
+
+.reports-dropdown__current-wrapper
+	border: 1px solid #d8d8d8
+	line-height: 36px
+	display: block
+	width: 100%
+	height: 38px
+	padding: 0 25px 0 12px
+	box-sizing: border-box
+	background: #fff
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+.reports-dropdown__trigger
+	position: absolute
+	+pos(tm)
+	right: 10px
+
+.reports-dropdown__hidden, .reports-changefilial__hidden
+	position: absolute
+	top: 100%
+	left: 0
+	min-width: 100%
+	max-height: 300px
+	overflow: auto
+	background: #fff
+	box-shadow: 0 0 5px rgba(0,0,0,0.2)
+	z-index: 5
+
+.reports-changefilial__hidden
+	max-height: none
+	overflow: visible
+	padding: 10px
+
+.reports-dropdown__table
+	.td
+		padding: 14px 10px
+		border-bottom: 1px solid #d8d8d8
+		vertical-align: middle
+
+		&:first-child
+			width: 1px
+
+	.tr
+		&:hover
+			.td
+				background: #e5e5e5
+
+.reports-dropdown__button-chose
+	padding: 0 10px
+
+.reports-dropdown__hidden-title
+	padding: 10px
+	border-bottom: 1px solid #d8d8d8
+
+.reports-dropdown__hidden-close, .reports-changefilials__close
+	position: absolute
+	+pos(tm)
+	right: 10px
+
+.reports-changefilials__title
+	color: #fbb900
+
+.b-error-message, .b-success-message
+	color: #f20000
+	font-size: 17px
+	border: 1px solid #f20000
+	background: #fce6e6
+	padding: 25px
+
+.b-success-message
+	background: #e8f7da
+	color: #6caf37
+	border-color: #6caf37
+
+.icon-error_cross
+	+s(icon-cross_red)
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	margin-right: 5px
+
+.enter-like-registered
+	color: #848484
+
+.message--popup
+	position: fixed
+	+pos(tm)
+	width: 100%
+	z-index: 1000
+
+input.autocomplete-input
+	padding-right: 60px
+
+.person-listing-hidden
+	position: absolute
+	top: 100%
+	left: 0
+	min-width: 100%
+	display: none
+
+.reports-arch__select-chose
+	width: 440px
+
+.reports-arch__secondary-selects__wrapper
+	width: 260px
+
+.icon-form-search-order__open-add-filter
+	position: absolute
+	+pos(tm)
+	right: 30px
+	cursor: pointer
+	width: 20px
+	height: 20px
+
+	&:after
+		position: absolute
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		+pos(m)
+		+arr(10,5,#565655,b)
+
+	&.active
+		+transform(translateY(-50%) rotate(180deg))
+
+	&:hover
+		&:after
+			+arr(10,5,#fbb900, b)
